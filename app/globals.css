@@ -104,6 +104,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-top: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

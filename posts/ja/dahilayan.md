@@ -1,10 +1,14 @@
 ---
-title: Boost your conversion rate JA
-date: 2020-03-16
-author: Michael Foster
-image: /images/post-1.jpg
-excerpt: test
+title: ブキドノン、ダヒラヤンでのスリリングなジップラインアドベンチャー
+image: /images/post-dahilayan-zipline.jpg
+excerpt: アジア最長のデュアルジップラインでブキドノンの空を駆け抜けよう！
 slug: dahilayan
+date: 'Dec 16, 2023'
+datetime: '2023-12-16'
 ---
 
-Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.
+フィリピン、ブキドノンの空を滑る際、顔に風を感じるスリルを体験してください。ダヒラヤン・アドベンチャー・パークは、アジア最長のデュアルジップラインを提供しており、海抜4,700フィート、全長840メートルの息をのむような体験を提供します。アドレナリンを求める方や自然愛好家にとって理想的なこのジップラインは、公園の壮大な風景を一望できます。
+
+4WDサファリクルーザーで発射タワーに向かった後、ハーネスに固定され、時速90キロに達する心躍る冒険が待っています。この経験は速さだけではなく、ダヒラヤンの豊かな緑と涼しく霧のかかった天候の息をのむような美しさを目の当たりにするまたとない機会です。
+
+アジアで最もスリリングなジップラインの一つを制覇した達成感とともに、あなたの冒険は終わります。一人旅でも友達や家族と一緒でも、ダヒラヤンのジップラインは忘れられない経験を約束します。

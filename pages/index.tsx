@@ -2,10 +2,8 @@
 
 import fs from 'fs';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import path from 'path';
-import LanguageSwitcher from '@/components/language-switcher';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 // Define the type for the post object
@@ -13,6 +11,7 @@ type Post = {
   slug: string;
   title: string;
   excerpt: string;
+  image: string;
 };
 
 // Define the type for the Home component's props
@@ -21,7 +20,7 @@ type HomeProps = {
   locale: string;
 };
 
-function Home({ posts }: HomeProps) {
+function Home({ posts, locale }: HomeProps) {
   const { t } = useTranslation();
 
   return (
@@ -39,7 +38,7 @@ function Home({ posts }: HomeProps) {
               key={post.slug}
               className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
             >
-              <img src={'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80'} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+              <img src={post.image} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
               <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
@@ -51,7 +50,7 @@ function Home({ posts }: HomeProps) {
                 </div>
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={'post/' + post.slug}>
+                <a href={'/' + locale + '/post/' + post.slug}>
                   <span className="absolute inset-0" />
                   {post.title}
                 </a>
@@ -65,23 +64,6 @@ function Home({ posts }: HomeProps) {
       </div>
     </div>
   )
-
-  // return (
-  //   <div>
-  //     <LanguageSwitcher></LanguageSwitcher>
-  //     <h1>{t('home.title')}</h1>
-  //     <ul>
-  //       {posts.map((post) => (
-  //         <li key={post.slug}>
-  //           <Link href={`/post/${post.slug}`} as={`/post/${post.slug}`}>
-  //           <h2>{post.title}</h2>
-  //           </Link>
-  //           <p>{post.excerpt}</p>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   </div>
-  // );
 }
 
 // Use getStaticProps to fetch data
@@ -98,6 +80,7 @@ export async function getStaticProps({locale} : {locale: string}) {
         slug: filename.replace(/\.md$/, ''),
         title: data.title,
         excerpt: data.excerpt,
+        image: data.image
       };
     });
   
